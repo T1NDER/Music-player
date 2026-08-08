@@ -1,0 +1,505 @@
+@font-face {
+    font-family: "IstokWeb";
+    src: url("../fonts/IstokWeb-Regular.woff2") format("woff2");
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kenia";
+    src: url("../fonts/Kenia-Regular.woff2") format("woff2");
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-Regular.woff2") format("woff2");
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+    font-weight: 600; 
+    font-style: normal;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* Заголовок */
+
+header {
+    height: 1054px;
+    max-height: 100%;
+    background-image: url("../images/stars-background.jpg");
+    overflow: hidden; 
+}
+
+.head__container {
+    width: 1440px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.head__logo {
+    margin-right: 0;
+}
+
+.head__logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 80px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "IstokWeb";
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.menu ul li a:hover{
+    opacity: 0.7;
+}
+
+.part__container {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    height: calc(1024px - 120px);
+}
+
+.left__part {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+    gap: 150px;
+}
+
+.left__part h1 {
+    font-family: "Kenia";
+    font-size: 8em;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0 0 60px 0;
+    line-height: 1.1;
+    letter-spacing: 4px;
+}
+
+.left__part span {
+    font-family: "IstokWeb";
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 300px;
+    opacity: 0.9;
+    margin-bottom: 150px;
+}
+
+.right__part {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right__part img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.right__part img:first-child {
+    width: 530px;
+    max-height: none;
+    z-index: 2;
+    transform: translateX(60px); 
+}
+
+.right__part img:last-child {
+    position: absolute;
+    bottom: -240px;
+    z-index: 1;
+    width: 400px;
+    left: 50%;
+    transform: translateX(calc(-50% + 30px));
+    opacity: 70%;
+}
+
+/* Секция 1 */
+
+.main__desktop {
+    width: 100%;
+    height: 924px;
+    background-color: #D53005 ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.main__desktop h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 70px 0 0 135px;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1.8em;
+    color: white;
+}
+
+.button__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 135px; 
+    padding-right: 40px;
+    gap: 40px;
+}
+
+.button__container button {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1.8em;
+    color: white;
+    width: 380px;
+    height: 80px;
+    background: radial-gradient(circle at center, #B13E18 0%, #F3501A 100%);
+    border: none;
+    box-shadow: 0 4px 0 #8B2F10, 0 5px 10px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2); 
+    transition: all 0.1s ease;
+    top: 0;
+}
+
+.button__container button:hover {
+    background: linear-gradient(180deg, #FF5A24 0%, #C14E28 100%);
+    transform: scale(1.05);
+}
+
+.button__container button:active {
+    top: 5px; 
+    transform: scale(0.95);
+    box-shadow: 0 0 0 #8B2F10, 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.img__container > img {
+    flex: 1;
+    width: 1000px;
+    height: 660px;
+}
+
+/* Секция 2 */
+
+.main__description {
+    width: 100%;
+    height: 924px;
+    background: linear-gradient(to bottom, #D53005 0%, #000000 10%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.main__description h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px 0 0 135px;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.description__container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+} 
+
+.description__container p {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+/* Секция 3 */
+
+.main__store {
+    width: 100%;
+    height: 1024px;
+    background: #D53005;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.content h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 70px 0 0 135px;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.download-buttons button {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1em;
+    width: 240px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 0 #8B2F10, 0 5px 10px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2); 
+    transition: transform 0.2s ease; 
+    cursor: pointer;
+}
+
+.download-buttons button:hover {
+    transform: scale(1.05); 
+}
+
+.download-buttons button:active {
+    transform: scale(0.95);
+}
+
+.download-buttons button:first-child {
+    background: black;
+    color: white;
+}
+
+.download-buttons button:last-child {
+    border: 1px solid #E3E3E3;
+    background: white;
+    color: black;
+}
+
+
+.previous-version {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    max-width: 600px;   
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 0 20px; 
+}
+
+.previous-version h3 {
+    margin: 0 0 20px 0;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.5em;   
+}
+
+.previous-version p {
+    margin: 0 0 20px 0;
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 1.6;  
+}
+
+.previous-version a {
+    color: #000;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-decoration: underline; 
+}
+
+/* Низ страницы */
+
+footer {
+    width: 100%;
+    min-height: 545px;
+    background: linear-gradient(to bottom, #D53005 0%, #000000 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 130px auto 50px auto;
+    padding: 0;
+}
+
+.footer__column {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.footer__column h2 {
+    margin-bottom: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.footer__column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__column ul li {
+    margin-bottom: 10px;
+}
+
+.footer__column a {
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer__column a:hover {
+    opacity: 1;
+}
+
+.footer__bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer_bottom {
+    display: flex;
+    flex-shrink: 0; 
+    align-items: center;
+    gap: 15px;
+}
+
+.footer_bottom h2 {
+    font-family: "Kenia";
+    font-weight: 400;
+}
+
+.footer_bottom span {
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.footer__info ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.footer__info a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.footer__info a:hover {
+    opacity: 1;
+}
